@@ -8,8 +8,9 @@ Meridian is validated on real hardware, not only in a virtual machine. "Validate
 |---|---|---|---|
 | Dell Latitude 7490 | Core i5, Kaby Lake Refresh | Intel UHD 620 (Gen 9.5) | Full validation |
 | Asus Zenbook | Core i7-1165G7, Tiger Lake | Intel Iris Xe (Gen 12) | Full validation; a cosmetic Plymouth offset on this GPU |
+| Desktop (Gigabyte B760M) | Core i5-14400, Raptor Lake | NVIDIA RTX 3060, proprietary driver | Primary development machine, in daily use; dual monitors; NVIDIA via the post-install Xid-109 fix |
 
-Both are Intel-graphics laptops, which is the primary target for the default image. NVIDIA is handled as a separate post-install path for the reasons in [engineering-log.md](engineering-log.md).
+The two laptops use Intel graphics, the primary target for the default image. The desktop runs a discrete NVIDIA GPU on the proprietary driver applied post-install (the closed 610.57.04 driver with GSP firmware disabled), the configuration from the Xid-109 investigation in [engineering-log.md](engineering-log.md). NVIDIA remains a post-install path, not part of the default image.
 
 ## What a full validation covers
 

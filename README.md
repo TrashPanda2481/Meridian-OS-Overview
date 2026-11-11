@@ -122,6 +122,7 @@ The same action produces four amounts of output. The decision and the authority 
 |---|---|---|---|
 | Dell Latitude 7490 | Core i5, Kaby Lake Refresh | Intel UHD 620 | Full validation |
 | Asus Zenbook | Core i7-1165G7, Tiger Lake | Intel Iris Xe | Full validation; cosmetic Plymouth offset |
+| Desktop (Gigabyte B760M) | Core i5-14400, Raptor Lake | NVIDIA RTX 3060, proprietary driver | Primary development machine, in daily use; dual monitors; NVIDIA via the post-install Xid-109 fix |
 
 The install path is re-validated on bare metal at each milestone build. Matrix, checklist, and known cosmetic issues: [validation.md](docs/validation.md). NVIDIA is a post-install path; see the Xid-109 entry in [engineering-log.md](docs/engineering-log.md).
 
