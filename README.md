@@ -13,6 +13,7 @@ This repository is the project's public technical overview: what has been built,
 | Packages | MPM, a pacman-style CLI over apt, with a suggestion engine |
 | Compass build | Python prototype in production use; Rust port scoped, not started |
 | Current release | 1.1-b5, publicly shipped, bare-metal validated on Intel laptops |
+| Long-term kernel | Rose, a Rust capability microkernel in development; see [rose.md](docs/rose.md) |
 | Status | In daily use with a known defect list; see [Status](#9-status) |
 
 ![Meridian desktop: dark world map wallpaper with amber coastlines, a coordinate grid, a compass rose bottom-left, and a live coordinate and clock readout top-right](img/desktop.webp)
@@ -44,6 +45,8 @@ Meridian is built in three layers:
 The design rule across all three: guidance level is not permission level. A user on full automation and a user on a bare command line have the same administrative authority; only the verbosity and confirmation differ. Target audience is desktop and workstation users across the full range of experience, on one image. The base is Debian Stable because the beginner end of that range needs a base that does not break.
 
 Full detail: [architecture.md](docs/architecture.md).
+
+Long term, Meridian is intended to move off the Linux kernel onto [Rose](https://github.com/TrashPanda2481/Rose-Overview), a from-scratch capability microkernel written in Rust, with Compass becoming a native layer whose authority the kernel enforces. Rose is in development and not yet usable as Meridian's kernel. The transition path and the adaptive layer's design are in [rose.md](docs/rose.md).
 
 ---
 
@@ -173,6 +176,7 @@ Stream details and the asset-mirror invariants: [compass.md](docs/compass.md#upd
 | [security-model.md](docs/security-model.md) | the privilege model, the IPC threat model, the hardening that shipped |
 | [validation.md](docs/validation.md) | hardware matrix, confirmed-working checklist, known cosmetic issues |
 | [roadmap.md](docs/roadmap.md) | deferred, open, and planned work |
+| [rose.md](docs/rose.md) | the intended long-term architecture: the Rose kernel, the transition path, and the adaptive layer's design |
 
 ---
 

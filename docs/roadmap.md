@@ -28,10 +28,15 @@ The current GUI is self-contained but built with a floating toolkit window; seve
 
 A Meridian-branded System Settings hub (curated deep links to the relevant KDE modules plus native Meridian panels, rather than a reimplementation of System Settings) is an active sub-project on its own branch.
 
+## Long-term architecture
+
+Meridian's intended long-term base is Rose, a from-scratch capability microkernel in Rust, reached through a phased transition with a narrow Linux-compatibility shim that shrinks every phase. Compass's successor on Rose is an adaptive layer whose authority comes only from user approvals and is enforced by the kernel. The kernel is in Phase 1 (the component model) of a six-phase transition; the adaptive layer is a written design with no code. Detail in [rose.md](rose.md).
+
 ## Related projects
 
 Projects that share components or design with Meridian:
 
+- **Rose**, the intended long-term kernel; its technical overview is [Rose-Overview](https://github.com/TrashPanda2481/Rose-Overview).
 - **Grid**, a terminal written in Rust, intended as the first external consumer of the Compass crates once the port produces them.
 - **The Meridian Look-and-Feel** (icon pack and theme), packaged as Debian packages and delivered both in the image and over the air.
 
